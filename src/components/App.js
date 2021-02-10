@@ -5,7 +5,7 @@ const PageOne = () => {
   return (
     <div>
       Page ONE
-      <Link to="/pagetwo"> -->TWO</Link>
+      <Link to="/pagetwo"> TWO</Link>
     </div>
   );
 };
@@ -14,7 +14,7 @@ const PageTwo = () => {
   return (
     <div>
       Page TWO
-      <Link to="/"> -->ONE</Link>
+      <Link to="/"> ONE</Link>
     </div>
   );
 };

@@ -1,12 +1,13 @@
 import React from "react";
-import { Field, FormSection, reduxForm } from "redux-form";
+import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
-  renderInput({ input, label }) {
+  renderInput({ input, label, meta }) {
     return (
       <div className="field">
         <label>{label}</label>
         <input {...input} />
+        <div>{meta.error}</div>
       </div>
     );
   }
@@ -44,9 +45,10 @@ const validate = (formValues) => {
     errors.description = "must enter a valid description";
   }
 
-  return error;
+  return errors;
 };
 
 export default reduxForm({
   form: "streamCreate",
+  validate,
 })(StreamCreate);
